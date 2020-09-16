@@ -1,0 +1,37 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
+metadata:
+  name: @COMPONENTE_NAME@
+  namespace: @NAMESPACE@
+  label:
+    bar-version: @BAR_VERSION@
+spec:
+  pod:
+    containers:
+      runtime:
+        image: image-registry.openshift-image-registry.svc:5000/@NAMESPACE@/@COMPONENTE_NAME@:@BAR_VERSION@
+        imagePullPolicy: Always
+  license:
+    accept: true
+    license: L-AMYG-BQ2E4U
+    use: CloudPakForIntegrationProduction
+  adminServerSecure: false
+  router:
+    timeout: 120s
+  customContentServer: false
+  useCommonServices: true
+  designerFlowsOperationMode: disabled
+  service:
+    endpointType: http
+  version: @ACE_VERSION@
+  logFormat: basic
+  replicas: @REPLICAS@
+  #barURL: @COMPONENTE_URL_BAR@
+  configurations:
+    - @COMPONENTE_NAME@-setdbparms
+    - @COMPONENTE_NAME@-serverconf
+    - @COMPONENTE_NAME@-truststore-@TRUSTSTORE_FILE@
+    - @COMPONENTE_NAME@-keystore-@KEYSTORE_FILE@
+    - @COMPONENTE_NAME@-odbc
+    - @COMPONENTE_NAME@-policyproject
+    - @COMPONENTE_NAME@-accounts

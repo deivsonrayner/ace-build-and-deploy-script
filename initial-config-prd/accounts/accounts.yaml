@@ -1,0 +1,5 @@
+accounts:
+ http:
+  - name: "Account 1"
+    credentials: {}
+    endpoint: {}

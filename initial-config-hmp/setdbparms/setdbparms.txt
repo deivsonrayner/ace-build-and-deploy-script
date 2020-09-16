@@ -1,0 +1,4 @@
+truststore::truststorePass es-truststore lrEmDPwu5eBT
+keystore::keystorePass keystore 123456
+kafka::aceuser kafka-user-ace LoKggXo7hlqm
+mq::MQ mqm mqm

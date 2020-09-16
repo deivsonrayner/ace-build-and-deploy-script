@@ -1,0 +1,25 @@
+---
+ResourceManagers:
+  JVM:
+    truststoreType: 'p12'
+    truststoreFile: '/home/aceuser/ace-server/truststore/event-processor-truststore-truststore.p12'
+    truststorePass: 'truststore::truststorePass'
+    jvmDebugPort: 9999
+
+# Defaults:
+#   Policies:
+#     HTTPSConnector: 'HTTPS'
+
+Defaults:
+ #defaultApplication: ''       # Name a default application under which independent resources will be placed
+ policyProject: 'event-processor-policies'   # Name of the Policy project that will be used for unqualified Policy references
+# Policies:
+   # Set default policy names, optionally qualified with a policy project as {policy project}:name
+#   HTTPSConnector:          # Default HTTPS connector policy 
+#     KeyPassword: '123456'
+#     KeystoreFile: '/home/aceuser/keystores/event-processor-keystore.p12'
+#     KeystorePassword: 'keystore::keystorePass'
+#     KeystoreType: 'p12'
+#     TruststoreFile: '/home/aceuser/truststore/event-processor-truststore.p12'
+#     TruststorePassword: 'truststore::truststorePass'
+#     TruststoreType: 'p12'

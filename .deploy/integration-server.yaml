@@ -1,0 +1,37 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
+metadata:
+  name: customer-api
+  namespace: cp4i
+  label:
+    bar-version: 1.0.0
+spec:
+  pod:
+    containers:
+      runtime:
+        image: image-registry.openshift-image-registry.svc:5000/cp4i/customer-api:1.0.0
+        imagePullPolicy: Always
+  license:
+    accept: true
+    license: L-AMYG-BQ2E4U
+    use: CloudPakForIntegrationProduction
+  adminServerSecure: false
+  router:
+    timeout: 120s
+  customContentServer: false
+  useCommonServices: true
+  designerFlowsOperationMode: disabled
+  service:
+    endpointType: http
+  version: 11.0.0.9-r3
+  logFormat: basic
+  replicas: 1
+  #barURL: http://meu.httpserver:8080/meu.bar
+  configurations:
+    - customer-api-setdbparms
+    - customer-api-serverconf
+    - customer-api-truststore-truststore.p12
+    - customer-api-keystore-keystore.p12
+    - customer-api-odbc
+    - customer-api-policyproject
+    - customer-api-accounts

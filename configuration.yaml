@@ -1,0 +1,62 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: @COMPONENTE_NAME@-setdbparms
+  namespace: @NAMESPACE@
+spec:
+  secretName: @COMPONENTE_NAME@-setdbparms
+  type: setdbparms
+---
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: @COMPONENTE_NAME@-serverconf
+  namespace: @NAMESPACE@
+spec:
+  contents: @B64_SERVERCONF@
+  type: serverconf
+---
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: @COMPONENTE_NAME@-truststore-@TRUSTSTORE_FILE@
+  namespace: @NAMESPACE@
+spec:
+  secretName: @COMPONENTE_NAME@-truststore
+  type: truststore
+---
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: @COMPONENTE_NAME@-keystore-@KEYSTORE_FILE@
+  namespace: @NAMESPACE@
+spec:
+  secretName: @COMPONENTE_NAME@-keystore
+  type: keystore
+---
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: @COMPONENTE_NAME@-odbc
+  namespace: @NAMESPACE@
+spec:
+  contents: @B64_ODBC@
+  type: odbc
+---
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: @COMPONENTE_NAME@-policyproject
+  namespace: @NAMESPACE@
+spec:
+  contents: @B64_POLICYPROJ@
+  type: policyproject
+---
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: @COMPONENTE_NAME@-accounts
+  namespace: @NAMESPACE@
+spec:
+  secretName: @COMPONENTE_NAME@-accounts
+  type: accounts

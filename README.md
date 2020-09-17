@@ -1,4 +1,4 @@
-# ace-build-and-deploy-scritps
+# ace-build-and-deploy-script
 
 Os scritps foram criados como referência para a implementação de fluxos de integração e implantação continua de Aplicações e Configurações do ACE utilizando os recursos do Operator conforme documentado em: https://www.ibm.com/support/knowledgecenter/SSTTDS_11.0.0/com.ibm.ace.icp.doc/certc_install_appconnectcomponents.html
 
